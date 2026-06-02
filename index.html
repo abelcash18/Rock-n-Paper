@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="game" aria-labelledby="game-title">
+    <h1 id="game-title">Rock Paper Scissors</h1>
+    <p class="subtitle">Pick your move. The computer will choose randomly, and the scoreboard updates after every round.</p>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card">
+        <span>Your Score</span>
+        <strong id="playerScore">0</strong>
+      </div>
+      <div class="score-card">
+        <span>Rounds</span>
+        <strong id="rounds">0</strong>
+      </div>
+      <div class="score-card">
+        <span>Computer Score</span>
+        <strong id="computerScore">0</strong>
+      </div>
+    </section>
+
+    <section class="choices" aria-label="Choose your move">
+      <button class="choice" data-choice="rock" type="button"><span class="emoji">&#9994;</span>Rock</button>
+      <button class="choice" data-choice="paper" type="button"><span class="emoji">&#9995;</span>Paper</button>
+      <button class="choice" data-choice="scissors" type="button"><span class="emoji">&#9996;&#65039;</span>Scissors</button>
+    </section>
+
+    <section class="arena" aria-label="Current round picks">
+      <div>
+        <div class="pick-label">You picked</div>
+        <div class="pick" id="playerPick" aria-live="polite">&#10068;</div>
+      </div>
+      <div class="versus">VS</div>
+      <div>
+        <div class="pick-label">Computer picked</div>
+        <div class="pick" id="computerPick" aria-live="polite">&#10068;</div>
+      </div>
+    </section>
+
+    <div class="result" id="result" role="status" aria-live="polite">Make your first move!</div>
+    <button class="reset" id="reset" type="button">Reset Game</button>
+  </main>
+</body>
+</html>
